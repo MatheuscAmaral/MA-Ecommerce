@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { api } from "../../services/api";
 import { useEffect, useState, useContext } from "react";
-import { CartContext, CartProps } from "../../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
 import { ProductsProps } from "../home";
 import { MdAddShoppingCart } from "react-icons/md";
 
@@ -20,7 +20,7 @@ export const Details = () => {
     useEffect(() => {
         const checkProductInCart = cart.find(p => p.id == Number(id));
     
-        async function getProductDetails(checkProductInCart?: CartProps) {
+        async function getProductDetails(checkProductInCart?: ProductsProps) {
                 if (checkProductInCart) {
                     setProduct(checkProductInCart);
                     return;

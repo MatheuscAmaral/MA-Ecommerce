@@ -1,7 +1,8 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
 import { IoCart } from "react-icons/io5";
+import  logo  from '../../assets/logo-ma.png'
 
 
 
@@ -14,7 +15,7 @@ export const Header = () => {
         <div className="flex lg:flex-1">
           <Link to={"/"} className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <img className="h-8 w-auto" src={logo} alt="" />
           </Link>
         </div>
         <div className="flex lg:hidden">
